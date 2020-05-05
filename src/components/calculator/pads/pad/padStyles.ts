@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 interface IContainer {
   color?: 'bright'
+  span?: boolean
 }
 
 const Container = styled.button<IContainer>`
@@ -12,7 +13,10 @@ const Container = styled.button<IContainer>`
   justify-content: center;
   align-items: center;
   border: none;
+  outline: none;
+  cursor: pointer;
   color: ${({ color }) => color === 'bright' && '#9d7fff'};
+  grid-column: ${({ span }) => span && 'span 2'};
 `
 
 export default Container

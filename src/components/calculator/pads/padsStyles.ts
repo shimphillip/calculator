@@ -5,6 +5,8 @@ const Container = styled.div`
   grid-template-columns: repeat(4, 1fr);
   border-radius: 1.5rem;
   height: 50%;
+  width: 99%;
+  margin-left: auto;
   margin-top: 20px;
 `
 

@@ -7,7 +7,7 @@ const Pads = () => {
     <Container>
       <Pad color={'bright'}>C</Pad>
       <Pad color={'bright'}>%</Pad>
-      <Pad color={'bright'}>Back</Pad>
+      <Pad color={'bright'}>{'<='}</Pad>
       <Pad color={'bright'}>÷</Pad>
       <Pad>7</Pad>
       <Pad>8</Pad>
@@ -23,8 +23,9 @@ const Pads = () => {
       <Pad color={'bright'}>+</Pad>
       <Pad>0</Pad>
       <Pad>.</Pad>
-      <Pad>ha</Pad>
-      <Pad color={'bright'}>=</Pad>
+      <Pad color={'bright'} span={true}>
+        =
+      </Pad>
     </Container>
   )
 }

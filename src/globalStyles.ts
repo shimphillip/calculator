@@ -12,12 +12,13 @@ const GlobalStyle = createGlobalStyle`
 			font-size: 10px;
 		}
 
-  body {
-		height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 `
 
 export default GlobalStyle

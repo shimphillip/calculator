@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const Container = styled.div`
   position: relative;
-  width: 360px;
+  width: 320px;
   height: 640px;
   border: solid 1.5rem #9d7fff;
   border-radius: 3rem;

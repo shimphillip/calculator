@@ -7,7 +7,7 @@ const Container = styled.div`
   height: 50%;
   width: 99%;
   margin-left: auto;
-  margin-top: 20px;
+  margin-top: 50px;
 `
 
 export default Container

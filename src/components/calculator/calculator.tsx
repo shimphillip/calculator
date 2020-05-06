@@ -29,18 +29,19 @@ const Calculator = () => {
       case '×':
         newResult *= rightOperand
         break
+      case '%':
+        newResult %= rightOperand
+        break
       case '÷':
         if (rightOperand === 0) {
-          return false
+          newResult = 0
+        } else {
+          newResult /= rightOperand
         }
-
-        newResult /= rightOperand
     }
 
     setResult(newResult)
-    setDisplay(newResult.toString().toString().slice(0, 12))
-
-    return true
+    setDisplay(newResult.toString().slice(0, 12))
   }
 
   const handleDigitClick = (digit: Digit) => {
@@ -64,19 +65,30 @@ const Calculator = () => {
     setDisplay(newDisplay)
   }
 
+  const onPointButtonClick = () => {
+    let newDisplay = display
+
+    if (waitingForOperand) {
+      newDisplay = '0'
+    }
+
+    if (newDisplay.indexOf('.') === -1) {
+      newDisplay = newDisplay + '.'
+    }
+
+    setDisplay(newDisplay)
+    setWaitingForOperand(false)
+  }
+
   const handleOperatorClick = (operator: Operator) => {
     const operand = Number(display)
 
     // if we have an operator and not waiting for operand, calculate
     if (typeof pendingOperator !== 'undefined' && !waitingForOperand) {
-      if (!calculate(operand, pendingOperator)) {
-        return
-      }
-      // don't continue after calculate is finished
-    } else {
-      setResult(operand)
+      calculate(operand, pendingOperator)
     }
 
+    setResult(operand)
     setPendingOperator(operator)
     setWaitingForOperand(true)
   }
@@ -85,10 +97,7 @@ const Calculator = () => {
     const operand = Number(display)
 
     if (typeof pendingOperator !== 'undefined' && !waitingForOperand) {
-      if (!calculate(operand, pendingOperator)) {
-        return
-      }
-
+      calculate(operand, pendingOperator)
       setPendingOperator(undefined)
     } else {
       setDisplay(operand.toString())
@@ -120,6 +129,7 @@ const Calculator = () => {
         handleOperatorClick={handleOperatorClick}
         handleEqualClick={handleEqualClick}
         handleClear={handleClear}
+        onPointButtonClick={onPointButtonClick}
       />
     </Container>
   )

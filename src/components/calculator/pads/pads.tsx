@@ -8,6 +8,7 @@ interface PadsProps {
   handleOperatorClick: (operator: Operator) => void
   handleEqualClick: () => void
   handleClear: () => void
+  onPointButtonClick: () => void
 }
 
 const Pads = ({
@@ -15,14 +16,16 @@ const Pads = ({
   handleOperatorClick,
   handleEqualClick,
   handleClear,
+  onPointButtonClick,
 }: PadsProps) => {
   return (
     <Container>
-      <Pad onClick={handleClear} color={'bright'}>
-        C
+      <Pad onClick={handleClear} color={'bright'} span>
+        AC
       </Pad>
-      <Pad color={'bright'}>%</Pad>
-      <Pad color={'bright'}>{'<='}</Pad>
+      <Pad onClick={() => handleOperatorClick('%')} color={'bright'}>
+        %
+      </Pad>
       <Pad onClick={() => handleOperatorClick('÷')} color={'bright'}>
         ÷
       </Pad>
@@ -45,7 +48,7 @@ const Pads = ({
         +
       </Pad>
       <Pad onClick={() => handleDigitClick(0)}>0</Pad>
-      <Pad>.</Pad>
+      <Pad onClick={onPointButtonClick}>.</Pad>
       <Pad onClick={handleEqualClick} color={'bright'} span>
         =
       </Pad>

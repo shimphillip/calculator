@@ -13,7 +13,7 @@ const Container = styled.div`
     height: 130px;
   }
 
-  .current-number {
+  .display {
     padding-top: 5px;
     font-size: 40px;
   }

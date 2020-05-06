@@ -1,11 +1,18 @@
 import React from 'react'
 import Container from './displayStyles'
 
-const Display = () => {
+interface DisplayProps {
+  expression: string
+  value: string
+}
+
+const Display = ({ value, expression }: DisplayProps) => {
   return (
     <Container>
-      <div className="history"></div>
-      <div className="current-number">123</div>
+      <div className="history">
+        <span>{expression}</span>
+      </div>
+      <div className="display">{value}</div>
     </Container>
   )
 }

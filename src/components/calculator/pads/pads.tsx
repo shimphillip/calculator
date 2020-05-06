@@ -1,29 +1,52 @@
 import React from 'react'
 import Container from './padsStyles'
 import Pad from './pad/pad'
+import { Digit, Operator } from '../../../lib/types'
 
-const Pads = () => {
+interface PadsProps {
+  handleDigitClick: (digit: Digit) => void
+  handleOperatorClick: (operator: Operator) => void
+  handleEqualClick: () => void
+  handleClear: () => void
+}
+
+const Pads = ({
+  handleDigitClick,
+  handleOperatorClick,
+  handleEqualClick,
+  handleClear,
+}: PadsProps) => {
   return (
     <Container>
-      <Pad color={'bright'}>C</Pad>
+      <Pad onClick={handleClear} color={'bright'}>
+        C
+      </Pad>
       <Pad color={'bright'}>%</Pad>
       <Pad color={'bright'}>{'<='}</Pad>
-      <Pad color={'bright'}>÷</Pad>
-      <Pad>7</Pad>
-      <Pad>8</Pad>
-      <Pad>9</Pad>
-      <Pad color={'bright'}>×</Pad>
-      <Pad>4</Pad>
-      <Pad>5</Pad>
-      <Pad>6</Pad>
-      <Pad color={'bright'}>-</Pad>
-      <Pad>1</Pad>
-      <Pad>2</Pad>
-      <Pad>3</Pad>
-      <Pad color={'bright'}>+</Pad>
-      <Pad>0</Pad>
+      <Pad onClick={() => handleOperatorClick('÷')} color={'bright'}>
+        ÷
+      </Pad>
+      <Pad onClick={() => handleDigitClick(7)}>7</Pad>
+      <Pad onClick={() => handleDigitClick(8)}>8</Pad>
+      <Pad onClick={() => handleDigitClick(9)}>9</Pad>
+      <Pad onClick={() => handleOperatorClick('×')} color={'bright'}>
+        ×
+      </Pad>
+      <Pad onClick={() => handleDigitClick(4)}>4</Pad>
+      <Pad onClick={() => handleDigitClick(5)}>5</Pad>
+      <Pad onClick={() => handleDigitClick(6)}>6</Pad>
+      <Pad onClick={() => handleOperatorClick('-')} color={'bright'}>
+        -
+      </Pad>
+      <Pad onClick={() => handleDigitClick(1)}>1</Pad>
+      <Pad onClick={() => handleDigitClick(2)}>2</Pad>
+      <Pad onClick={() => handleDigitClick(3)}>3</Pad>
+      <Pad onClick={() => handleOperatorClick('+')} color={'bright'}>
+        +
+      </Pad>
+      <Pad onClick={() => handleDigitClick(0)}>0</Pad>
       <Pad>.</Pad>
-      <Pad color={'bright'} span={true}>
+      <Pad onClick={handleEqualClick} color={'bright'} span>
         =
       </Pad>
     </Container>

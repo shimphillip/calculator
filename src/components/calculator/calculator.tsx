@@ -86,9 +86,10 @@ const Calculator = () => {
     // if we have an operator and not waiting for operand, calculate
     if (typeof pendingOperator !== 'undefined' && !waitingForOperand) {
       calculate(operand, pendingOperator)
+    } else {
+      setResult(operand)
     }
 
-    setResult(operand)
     setPendingOperator(operator)
     setWaitingForOperand(true)
   }

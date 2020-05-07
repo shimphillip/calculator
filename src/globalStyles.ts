@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
 		}
 
     body {
+      background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       font-family: 'Montserrat', sans-serif;
       height: 100vh;
       display: flex;

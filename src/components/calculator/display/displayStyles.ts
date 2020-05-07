@@ -3,7 +3,8 @@ import styled from 'styled-components'
 const Container = styled.div`
   position: relative;
   background: #f8f8fc;
-  height: 220px;
+  margin-top: 20px;
+  height: 200px;
   border-radius: 1.5rem;
   text-align: right;
   padding-right: 5px;
@@ -33,9 +34,9 @@ const Container = styled.div`
   }
 
   .history {
-    padding-top: 100px;
+    padding-top: 70px;
     font-size: 25px;
-    height: 130px;
+    height: 100px;
 
     span {
       color: #9d7fff;

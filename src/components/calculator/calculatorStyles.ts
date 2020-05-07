@@ -6,6 +6,7 @@ const Container = styled.div`
   height: 640px;
   border: solid 1.5rem #9d7fff;
   border-radius: 3rem;
+  background: white;
 
   &::before {
     position: absolute;

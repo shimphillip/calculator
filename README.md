@@ -1,44 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Gotta Search'EM All
 
-## Available Scripts
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e0677828-efbf-4098-aea6-ad630cf29728/deploy-status)](https://app.netlify.com/sites/zealous-raman-891a28/deploys)
 
-In the project directory, you can run:
+![screenshot](./docs/screenshot.png)
 
-### `yarn start`
+## Getting Started
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Visit to see the live app https://calculador.netlify.app/
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Prerequisites
 
-### `yarn test`
+`Git & NPM`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation steps
 
-### `yarn build`
+```zsh
+# clone the repo
+git clone https://github.com/shimphillip/calculator.git
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# navigate to the directory
+cd calculator
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+# install packages
+npm install or yarn
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# start the app
+npm run start or yarn start
+```
 
-### `yarn eject`
+## Running the tests
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+No tests yet🙊
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Deployment
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Easy deployment with netlify :)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Built With
 
-## Learn More
+- React and its hooks
+- Styled components
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Issues/Bug Reports and PR's welcome!
+
+## Versioning
+
+1.0.0
+
+## Authors
+
+- Phillip Shim
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+FreeCodeCamp for the idea

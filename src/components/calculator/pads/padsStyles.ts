@@ -4,10 +4,9 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border-radius: 1.5rem;
-  height: 50%;
-  width: 99%;
+  height: 45%;
+  width: 100%;
   margin-left: auto;
-  margin-top: 55px;
 `
 
 export default Container

@@ -1,42 +1,19 @@
 import styled from 'styled-components'
+import wave from '../../../assets/wave.png'
 
 const Container = styled.div`
   position: relative;
   background: #f8f8fc;
-  margin-top: 20px;
-  height: 200px;
-  border-radius: 1.5rem;
+  height: 300px;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
   text-align: right;
   padding-right: 5px;
-  margin-right: 1px;
-
-  &::before,
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    width: 160px;
-  }
-
-  &::before {
-    height: 80px;
-    background-color: #f8f8fc;
-    bottom: -25px;
-    left: 0px;
-  }
-
-  &::after {
-    height: 82px;
-    background-color: #fff;
-    bottom: -72.5px;
-    right: 1px;
-  }
 
   .history {
-    padding-top: 70px;
+    padding-top: 25px;
     font-size: 25px;
-    height: 100px;
+    height: 55px;
 
     span {
       color: #9d7fff;
@@ -46,6 +23,25 @@ const Container = styled.div`
   .display {
     padding-top: 5px;
     font-size: 40px;
+  }
+
+  .wave.animate {
+    position: absolute;
+    width: 100%;
+    height: 143px;
+    bottom: 0;
+    left: 0;
+    background: url(${wave});
+    animation: animate 0.55s linear infinite;
+  }
+
+  @keyframes animate {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: 1360px;
+    }
   }
 `
 

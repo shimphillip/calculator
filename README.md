@@ -59,4 +59,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-FreeCodeCamp for the idea
+https://cdn.dribbble.com/users/2818589/screenshots/9549612/media/af41933767dd084db8043b3231201961.mp4 - Design Inspiration
+
+https://www.iconfinder.com/search/?q=calculator&from=homepage - favicon

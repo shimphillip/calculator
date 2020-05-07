@@ -19,6 +19,7 @@ const Container = styled.div`
     background: #9d7fff;
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
+    z-index: 1;
   }
 
   &::after {
@@ -31,6 +32,7 @@ const Container = styled.div`
     height: 10px;
     background: #8762ff;
     border-radius: 10px;
+    z-index: 2;
   }
 `
 

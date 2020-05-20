@@ -17,6 +17,7 @@ const Container = styled.button<IContainer>`
   cursor: pointer;
   color: ${({ color }) => color === 'bright' && '#9d7fff'};
   grid-column: ${({ span }) => span && 'span 2'};
+  background: white;
 
   &:hover {
     font-weight: bold;

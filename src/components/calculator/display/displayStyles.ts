@@ -9,6 +9,8 @@ const Container = styled.div`
   border-top-right-radius: 1.5rem;
   text-align: right;
   padding-right: 5px;
+  width: 99%;
+  margin-left: 1px;
 
   .history {
     padding-top: 25px;
